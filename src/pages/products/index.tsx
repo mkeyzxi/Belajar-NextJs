@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
@@ -11,7 +12,14 @@ const Products = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  return <h1>ini halaman products</h1>;
+  return 
+   (<>
+   <Head> 
+    <title>Products</title>
+
+     </Head>
+  <h1>ini halaman products</h1>;
+   </>)
 }
 
 export default Products;

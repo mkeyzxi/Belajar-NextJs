@@ -16,7 +16,13 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <>
-    <h1>ini menu utama</h1>
+       <Head> 
+    <title>Beranda</title>
+
+     </Head>
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
     </>
   );
 }

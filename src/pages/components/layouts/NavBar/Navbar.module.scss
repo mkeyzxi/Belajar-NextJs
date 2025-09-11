@@ -1,0 +1,8 @@
+@import "@/styles/colors.scss";
+
+.navbar {
+	background-color: map-get($schema, primary);
+	// background-color: map-get($map: $schema, $key: primary);
+	color: var(--background);
+	padding: 1rem;
+} 
