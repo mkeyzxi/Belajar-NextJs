@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 const LoginView = () => {
-	
 
-	const {push} = useRouter();
+
+	const { push } = useRouter();
 	const handlerLogin = () => {
 		console.log("User logged in");
 		push("/products");
