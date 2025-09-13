@@ -1,8 +1,9 @@
-@import "@/styles/colors.scss";
+@use "sass:map";
+@use "@/styles/colors.scss" as *; // as * supaya variabelnya langsung bisa dipakai
 
 .navbar {
-	background-color: map-get($schema, primary);
-	// background-color: map-get($map: $schema, $key: primary);
-	color: var(--background);
-	padding: 1rem;
-} 
+  background-color: map.get($schema, primary);
+  // background-color: map.get($schema, 'primary');  <-- pakai string aman juga
+  color: var(--background);
+  padding: 1rem;
+}
