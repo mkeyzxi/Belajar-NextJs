@@ -63,7 +63,7 @@
 // gunain swr
 import ProductView from "../views/Product/Main";
 import useSWR from 'swr';
-import fetcher from "../lib/swr/fetcher";
+import fetcher from "../../lib/swr/fetcher";
 
 const Products = () => {
   const { data, error, isLoading } = useSWR("/api/product", fetcher);

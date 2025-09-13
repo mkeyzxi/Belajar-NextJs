@@ -4,7 +4,7 @@ import styles from "./Product.module.scss";
 type ProductTypes = { id: string, name: string, price: number, category: string, image: string };
 
 
-const ProductView = ({ products }: { products: ProductTypes[] }) => {
+const ProductView = ({ products = [] }: { products?: ProductTypes[] }) => {
 	return (
 		<>
 			<h1 className={styles.product__title}>Daftar Produk</h1>
