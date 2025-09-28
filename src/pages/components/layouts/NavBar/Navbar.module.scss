@@ -6,4 +6,7 @@
   // background-color: map.get($schema, 'primary');  <-- pakai string aman juga
   color: var(--background);
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
