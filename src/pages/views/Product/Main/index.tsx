@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 // import Image from "next/image";
+import Link from "next/link";
 import styles from "./Product.module.scss";
 type ProductTypes = { id: string, name: string, price: number, category: string, image: string };
 
@@ -18,7 +19,7 @@ const ProductView = ({ products = [] }: { products?: ProductTypes[] }) => {
 					<div className={styles.product__item__skeleton__category} />
 					<div className={styles.product__item__skeleton__price} />
 				</div> : products.map((product: ProductTypes) => (
-					<div className={styles.product__item} key={product.id}>
+					<Link href={`/products/${product.id}`} className={styles.product__item} key={product.id}>
 						<img src={product.image} alt={product.name} className={styles.product__item__image} width="100%" height="100%"/>
 						<div >
 							<h3 className={styles.product__item__name}>{product.name}</h3>
@@ -28,7 +29,7 @@ const ProductView = ({ products = [] }: { products?: ProductTypes[] }) => {
 						})}</p>
 						<p className={styles.product__item__category}>{product.category}</p>
 						</div>
-					</div>
+					</Link>
 				))}
 
 				{/* {products.map((product: ProductTypes) => (
